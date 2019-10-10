@@ -3,6 +3,8 @@
 \usepackage{tikz}
 \usetikzlibrary{automata, positioning, arrows}
 \usepackage{float}
+
+\usepackage{xcolor}
 \usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 
 \tikzset{
@@ -172,8 +174,58 @@ $\delta(q_6, 1) = \{\}$\\
 $\delta(q_6, \epsilon) = \{\}$\\
 
 \newpage
-\item %5 
+\item ~\\ %5
+\textbf{Key/Legend:}\\ 
+{\color{blue} $\rightarrow$ \$0.05}\\
+{\color{olive} $\rightarrow$ \$0.10}\\
+{\color{magenta} $\rightarrow$ \$0.25}\\
+{\color{red} $\rightarrow$ \$1.00}
 
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[node distance=2cm]
+		%LHS
+		\node[state, initial] (q0) {$q_0$};
+		\node[state, below of=q0] (q1) {$q_1$};
+		\node[state, below of=q1] (q2) {$q_2$};
+		\node[state, below of=q2] (q3) {$q_3$};
+		\node[state, below of=q3] (q4) {$q_4$};
+		\node[state, below of=q4] (q5) {$q_5$};
+		\node[state, below of=q5] (q6) {$q_6$};
+		\node[state, below of=q6] (q7) {$q_7$};
+		\node[state, below of=q7] (q8) {$q_8$};
+		\node[state, below of=q8] (q9) {$q_9$};
+		\node[state, below of=q9] (q10) {$q_{10}$};
+		
+		%RHS
+		\node[state, right=2.3cm and 5cm of q0] (q11) {$q_{11}$};
+		\node[state, right=2.3cm and 5cm of q1] (q12) {$q_{12}$};
+		\node[state, right=2.3cm and 5cm of q2] (q13) {$q_{13}$};
+		\node[state, right=2.3cm and 5cm of q3] (q14) {$q_{14}$};
+		\node[state, right=2.3cm and 5cm of q4] (q15) {$q_{15}$};
+		\node[state, right=2.3cm and 5cm of q5] (q16) {$q_{16}$};
+		\node[state, right=2.3cm and 5cm of q6] (q17) {$q_{17}$};
+		\node[state, right=2.3cm and 5cm of q7] (q18) {$q_{18}$};
+		\node[state, right=2.3cm and 5cm of q8] (q19) {$q_{19}$};
+		\node[state, accepting, right=2.3cm and 5cm of q9] (q20) {$q_{20}$};
+		
+		\draw
+		(q0) edge[left] node{\$0.05} (q1)
+		(q0) edge[bend right, left] node{\$0.10} (q2)
+		(q0) edge[bend right, left] node{\$0.25} (q5)
+		(q0) edge[right] node{\$1.00} (q20)
+		
+		(q1) edge[left] node{\$0.05} (q2)
+		(q1) edge[bend right, left] node{\$0.10} (q3)
+		(q1) edge[bend right, left] node{\$0.25} (q6)
+		(q1) edge[right] node{\$1.00} (q20)
+		
+		
+		;
+	\end{tikzpicture}
+\end{figure}
+
+\newpage
 \item %6
 
 \item %7
