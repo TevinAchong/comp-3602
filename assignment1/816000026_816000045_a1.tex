@@ -149,12 +149,12 @@
 
 		\draw
 		(q0) edge[loop above, above] node{0,1}(q1)
-		(q0) edge[above] node{a} (q1)
+		(q0) edge[above] node{0} (q1)
 		(q0) edge[bend right, above] node{$\epsilon$}(q4)
-		(q1) edge[above] node{b} (q2)
-		(q2) edge[above] node{a} (q3)
-		(q3) edge[above] node{b} (q4)
-		(q4) edge[bend right, above] node{a} (q1)
+		(q1) edge[above] node{1} (q2)
+		(q2) edge[above] node{0} (q3)
+		(q3) edge[above] node{1} (q4)
+		(q4) edge[bend right, above] node{0} (q1)
 		;
 	\end{tikzpicture}
 \end{figure}
@@ -289,21 +289,21 @@ $\mathscr{L}_{1} - \mathscr{L}_{2}$ can be expressed as $(\mathscr{L}_{1} \bigcu
 	\hline
 	\textbf{Regular Expression} & \textbf{Recognized Strings} & \textbf{Non-Recognized Strings}\\
 	\hline
-	$a^*b^*$ & &\\
+	$a^*b^*$ & $\epsilon$ &aba \\
 	\cline{2-3}
-	& &\\
+	& ab &baa\\
 	\hline
-	$a(ba)^*bb$ & &\\
+	$a(ba)^*bb$ &abb &$\epsilon$\\
 	\cline{2-3}
-	& &\\
+	&ababb &bababb\\
 	\hline
-	$a^+ \cup b^*$ & &\\
+	$a^+ \cup b^*$ &bb & ab\\
 	\cline{2-3}
-	& &\\
+	&a &bab\\
 	\hline
-	$(\epsilon \cup a)b$ & &\\
+	$(\epsilon \cup a)b$ &b &$\epsilon$\\
 	\cline{2-3}
-	& &\\
+	& ab&bb\\
 	\hline
 	\end{tabular}
 \end{center}
