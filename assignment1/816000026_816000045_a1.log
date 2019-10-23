@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.17)  22 OCT 2019 19:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.17)  22 OCT 2019 20:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -643,26 +643,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--201
  []
 
 [4]
-Overfull \hbox (51.12526pt too wide) in paragraph at lines 346--347
+Overfull \hbox (51.12526pt too wide) in paragraph at lines 351--352
  [][] 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
 [1] (./816000026_816000045_a1.aux) ) 
 Here is how much of TeX's memory you used:
- 13856 strings out of 492982
- 286887 string characters out of 6134896
- 381379 words of memory out of 5000000
- 17161 multiletter control sequences out of 15000+600000
+ 13869 strings out of 492982
+ 287144 string characters out of 6134896
+ 385165 words of memory out of 5000000
+ 17174 multiletter control sequences out of 15000+600000
  10317 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,68p,449b,994s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -676,7 +676,7 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on 816000026_816000045_a1.pdf (6 pages, 113224 bytes).
+Output written on 816000026_816000045_a1.pdf (6 pages, 113881 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
