@@ -414,6 +414,42 @@ Since this is a contradiction of (c),  it can be concluded that ADD is not regul
 
 
 
+<<<<<<< HEAD
+=======
+\item %8
+$\Sigma$ = \{$0, 1, +, =$\}\\
+ADD = \{$x = y + z$ $\mid$ $x,y,z$ are binary integers and $x$ is the sum of $y$ and $z$\}
+
+\textbf{Proof by contradiction}
+
+For this proof, we will assume that ADD is a regular language and it has some pumping length, $p$. Let the string $s = 1^p =1^{p-1} 0 + 1$ where $s$ $\epsilon$ ADD and $p \leq |s|$. 
+
+There must exist some $x,y,z$ such that $s = xyz$ with,
+\begin{enumerate}
+\item $|y| > 0$
+\item $|xy| \leq p$
+\item for each $i \geq 0$, $xy^iz$ $\epsilon$ ADD
+\end{enumerate}
+
+From this string, $s$ can only be broken down into three parts, $xyz$, in one way: $y$ must be in the first sequence of $1's$. This must be done to obey rules (a) and (b). 
+
+We let:\\
+$y \Rightarrow $ $1^m$ such that $m \geq 1$ \\
+$x \Rightarrow 1^{p-m}$\\
+$z \Rightarrow  =1^{p-1} 0 + 1$\\
+
+if $i = 0$,\\
+$xy^0z = (1^{p-m}) (1^m)^0 (=1^{p-1} 0 + 1)$\\
+$xy^iz = 1^{p-m} = 1^{p-1} 0 + 1$\\
+
+Since $m \geq 1$, $p-m \ne p$ which means $1^{p-m} \ne 1^{p-1} 0 + 1$ in terms of binary addition.
+Therefore, there exists some $i$ such that $xy^iz$ $\notin$ ADD. 
+Since this is a contradiction of (c),  it can be concluded that ADD is not regular. 
+
+
+
+
+>>>>>>> 89cc069... Number 8
 
 \item ~\\%9
 \begin{center}
