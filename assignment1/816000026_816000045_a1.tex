@@ -105,7 +105,7 @@
 		
 		\draw
 		(q0) edge[above] node{1} (q1)
-		(q0) edge[loop above, above] node{$\epsilon$, 0, 1} (q1)
+		(q0) edge[loop above, above] node{0, 1} (q1)
 		(q1) edge[above] node{0} (q2)
 		(q2) edge[above] node{1} (q3)
 		(q3) edge[above] node{1} (q4)
@@ -149,12 +149,12 @@
 
 		\draw
 		(q0) edge[loop above, above] node{0,1}(q1)
-		(q0) edge[above] node{0} (q1)
+		(q0) edge[above] node{a} (q1)
 		(q0) edge[bend right, above] node{$\epsilon$}(q4)
-		(q1) edge[above] node{1} (q2)
-		(q2) edge[above] node{0} (q3)
-		(q3) edge[above] node{1} (q4)
-		(q4) edge[bend right, above] node{0} (q1)
+		(q1) edge[above] node{b} (q2)
+		(q2) edge[above] node{a} (q3)
+		(q3) edge[above] node{b} (q4)
+		(q4) edge[bend right, above] node{a} (q1)
 		;
 	\end{tikzpicture}
 \end{figure}
@@ -319,12 +319,12 @@ $\rightarrow$ \$0.25\\
 		
 		(q15) edge[left, blue] node{} (q16)
 		(q15) edge[bend left, left, olive] node{} (q17)
-		(q15) edge[left] node{} (q20)
+		(q15) edge[bend right] node{} (q20)
 		(q15) edge[right, red] node{} (q20)
 		
 		(q16) edge[left, blue] node{} (q17)
 		(q16) edge[bend left, left, olive] node{} (q18)
-		(q16) edge[left] node{} (q20)
+		(q16) edge[bend right, left] node{} (q20)
 		(q16) edge[right, red] node{} (q20)
 		
 		(q17) edge[left, blue] node{} (q18)
@@ -334,26 +334,24 @@ $\rightarrow$ \$0.25\\
 		
 		(q18) edge[left, blue] node{} (q19)
 		(q18) edge[bend left, left, olive] node{} (q20)
-		(q18) edge[bend left, left] node{} (q20)
+		(q18) edge[bend right, left] node{} (q20)
 		(q18) edge[right, red] node{} (q20)
 		
 		(q19) edge[bend right, left, blue] node{} (q20)
 		(q19) edge[bend left, left, olive] node{} (q20)		
-		(q19) edge[left] node{} (q20)
+		(q19) edge[bend right] node{} (q20)
 		(q19) edge[right, red] node{} (q20)
 		
 		(q20) edge[loop above, left, blue] node{} (q20)
 		(q20) edge[loop below, left, olive] node{} (q20)		
 		(q20) edge[loop left, left] node{} (q20)
 		(q20) edge[loop right, red] node{} (q20)
-		
 		;
 	\end{tikzpicture}
 \end{figure}
 
 \newpage
 \item ~\\ %6
-
 
 
 \begin{figure}[H]
@@ -381,6 +379,8 @@ $\rightarrow$ \$0.25\\
 $\mathscr{L}_{1} - \mathscr{L}_{2}$ can be expressed as $(\mathscr{L}_{1} \bigcup \mathscr{L}_2) \bigcap \overline{\mathscr{L}_{2}}$, assuming they are within the same universal set. This defines set difference in terms of intersection, union and complement, for which the regular languages are known to be regular. Thus it can be concluded that $\mathscr{L}_{1}  - \mathscr{L}_{2}$ is a regular language.  
 
 
+
+
 \item %8
 $\Sigma$ = \{$0, 1, +, =$\}\\
 ADD = \{$x = y + z$ $\mid$ $x,y,z$ are binary integers and $x$ is the sum of $y$ and $z$\}
@@ -414,42 +414,6 @@ Since this is a contradiction of (c),  it can be concluded that ADD is not regul
 
 
 
-<<<<<<< HEAD
-=======
-\item %8
-$\Sigma$ = \{$0, 1, +, =$\}\\
-ADD = \{$x = y + z$ $\mid$ $x,y,z$ are binary integers and $x$ is the sum of $y$ and $z$\}
-
-\textbf{Proof by contradiction}
-
-For this proof, we will assume that ADD is a regular language and it has some pumping length, $p$. Let the string $s = 1^p =1^{p-1} 0 + 1$ where $s$ $\epsilon$ ADD and $p \leq |s|$. 
-
-There must exist some $x,y,z$ such that $s = xyz$ with,
-\begin{enumerate}
-\item $|y| > 0$
-\item $|xy| \leq p$
-\item for each $i \geq 0$, $xy^iz$ $\epsilon$ ADD
-\end{enumerate}
-
-From this string, $s$ can only be broken down into three parts, $xyz$, in one way: $y$ must be in the first sequence of $1's$. This must be done to obey rules (a) and (b). 
-
-We let:\\
-$y \Rightarrow $ $1^m$ such that $m \geq 1$ \\
-$x \Rightarrow 1^{p-m}$\\
-$z \Rightarrow  =1^{p-1} 0 + 1$\\
-
-if $i = 0$,\\
-$xy^0z = (1^{p-m}) (1^m)^0 (=1^{p-1} 0 + 1)$\\
-$xy^iz = 1^{p-m} = 1^{p-1} 0 + 1$\\
-
-Since $m \geq 1$, $p-m \ne p$ which means $1^{p-m} \ne 1^{p-1} 0 + 1$ in terms of binary addition.
-Therefore, there exists some $i$ such that $xy^iz$ $\notin$ ADD. 
-Since this is a contradiction of (c),  it can be concluded that ADD is not regular. 
-
-
-
-
->>>>>>> 89cc069... Number 8
 
 \item ~\\%9
 \begin{center}
